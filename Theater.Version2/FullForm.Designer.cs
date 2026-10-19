@@ -1,0 +1,221 @@
+namespace Theater.Version2
+{
+    partial class FullForm
+    {
+        private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.Label heading;
+        private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.TabPage theatersTab;
+        private System.Windows.Forms.TabPage directorsTab;
+        private System.Windows.Forms.TabPage actorsTab;
+        private System.Windows.Forms.TabPage playsTab;
+        private System.Windows.Forms.TabPage castTab;
+        private System.Windows.Forms.TabPage viewersTab;
+        private System.Windows.Forms.TabPage ticketsTab;
+        private System.Windows.Forms.TabPage ratingsTab;
+        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.DataGridView grid;
+        private System.Windows.Forms.Label status;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button refreshButton;
+        private System.Windows.Forms.Button buyButton;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null)) components.Dispose();
+            base.Dispose(disposing);
+        }
+
+        private void InitializeComponent()
+        {
+            this.heading = new System.Windows.Forms.Label();
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.theatersTab = new System.Windows.Forms.TabPage();
+            this.directorsTab = new System.Windows.Forms.TabPage();
+            this.actorsTab = new System.Windows.Forms.TabPage();
+            this.playsTab = new System.Windows.Forms.TabPage();
+            this.castTab = new System.Windows.Forms.TabPage();
+            this.viewersTab = new System.Windows.Forms.TabPage();
+            this.ticketsTab = new System.Windows.Forms.TabPage();
+            this.ratingsTab = new System.Windows.Forms.TabPage();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.grid = new System.Windows.Forms.DataGridView();
+            this.status = new System.Windows.Forms.Label();
+            this.addButton = new System.Windows.Forms.Button();
+            this.editButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.refreshButton = new System.Windows.Forms.Button();
+            this.buyButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
+            this.SuspendLayout();
+            // heading
+            this.heading.AutoSize = true;
+            this.heading.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.heading.Location = new System.Drawing.Point(24, 18);
+            this.heading.Name = "heading";
+            this.heading.Size = new System.Drawing.Size(248, 32);
+            this.heading.Text = "Управление театром";
+            // table tabs
+            this.tabControl.Controls.Add(this.theatersTab);
+            this.tabControl.Controls.Add(this.directorsTab);
+            this.tabControl.Controls.Add(this.actorsTab);
+            this.tabControl.Controls.Add(this.playsTab);
+            this.tabControl.Controls.Add(this.castTab);
+            this.tabControl.Controls.Add(this.viewersTab);
+            this.tabControl.Controls.Add(this.ticketsTab);
+            this.tabControl.Controls.Add(this.ratingsTab);
+            this.tabControl.Location = new System.Drawing.Point(27, 115);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(910, 430);
+            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.TableChanged);
+            this.theatersTab.Location = new System.Drawing.Point(4, 24);
+            this.theatersTab.Name = "theatersTab";
+            this.theatersTab.Padding = new System.Windows.Forms.Padding(3);
+            this.theatersTab.Size = new System.Drawing.Size(902, 402);
+            this.theatersTab.Tag = 0;
+            this.theatersTab.Text = "Театры";
+            this.theatersTab.UseVisualStyleBackColor = true;
+            this.directorsTab.Location = new System.Drawing.Point(4, 24);
+            this.directorsTab.Name = "directorsTab";
+            this.directorsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.directorsTab.Size = new System.Drawing.Size(902, 402);
+            this.directorsTab.Tag = 1;
+            this.directorsTab.Text = "Режиссёры";
+            this.directorsTab.UseVisualStyleBackColor = true;
+            this.actorsTab.Location = new System.Drawing.Point(4, 24);
+            this.actorsTab.Name = "actorsTab";
+            this.actorsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.actorsTab.Size = new System.Drawing.Size(902, 402);
+            this.actorsTab.Tag = 2;
+            this.actorsTab.Text = "Актёры";
+            this.actorsTab.UseVisualStyleBackColor = true;
+            this.playsTab.Location = new System.Drawing.Point(4, 24);
+            this.playsTab.Name = "playsTab";
+            this.playsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.playsTab.Size = new System.Drawing.Size(902, 402);
+            this.playsTab.Tag = 3;
+            this.playsTab.Text = "Спектакли";
+            this.playsTab.UseVisualStyleBackColor = true;
+            this.castTab.Location = new System.Drawing.Point(4, 24);
+            this.castTab.Name = "castTab";
+            this.castTab.Padding = new System.Windows.Forms.Padding(3);
+            this.castTab.Size = new System.Drawing.Size(902, 402);
+            this.castTab.Tag = 4;
+            this.castTab.Text = "Состав спектакля";
+            this.castTab.UseVisualStyleBackColor = true;
+            this.viewersTab.Location = new System.Drawing.Point(4, 24);
+            this.viewersTab.Name = "viewersTab";
+            this.viewersTab.Padding = new System.Windows.Forms.Padding(3);
+            this.viewersTab.Size = new System.Drawing.Size(902, 402);
+            this.viewersTab.Tag = 5;
+            this.viewersTab.Text = "Зрители";
+            this.viewersTab.UseVisualStyleBackColor = true;
+            this.ticketsTab.Location = new System.Drawing.Point(4, 24);
+            this.ticketsTab.Name = "ticketsTab";
+            this.ticketsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ticketsTab.Size = new System.Drawing.Size(902, 402);
+            this.ticketsTab.Tag = 6;
+            this.ticketsTab.Text = "Билеты";
+            this.ticketsTab.UseVisualStyleBackColor = true;
+            this.ratingsTab.Location = new System.Drawing.Point(4, 24);
+            this.ratingsTab.Name = "ratingsTab";
+            this.ratingsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ratingsTab.Size = new System.Drawing.Size(902, 402);
+            this.ratingsTab.Tag = 7;
+            this.ratingsTab.Text = "Оценки";
+            this.ratingsTab.UseVisualStyleBackColor = true;
+            // search
+            this.searchBox.Location = new System.Drawing.Point(27, 72);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(230, 23);
+            this.searchBox.TextChanged += new System.EventHandler(this.SearchChanged);
+            // buttons
+            this.addButton.Location = new System.Drawing.Point(273, 67);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(105, 34);
+            this.addButton.Text = "Добавить";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.AddClicked);
+            this.editButton.Location = new System.Drawing.Point(389, 67);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(105, 34);
+            this.editButton.Text = "Изменить";
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.EditClicked);
+            this.deleteButton.Location = new System.Drawing.Point(505, 67);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(105, 34);
+            this.deleteButton.Text = "Удалить";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.DeleteClicked);
+            this.refreshButton.Location = new System.Drawing.Point(621, 67);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(105, 34);
+            this.refreshButton.Text = "Обновить";
+            this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.Click += new System.EventHandler(this.RefreshClicked);
+            // buyButton
+            this.buyButton.Location = new System.Drawing.Point(739, 67);
+            this.buyButton.Name = "buyButton";
+            this.buyButton.Size = new System.Drawing.Size(150, 34);
+            this.buyButton.Text = "Купить билет";
+            this.buyButton.UseVisualStyleBackColor = true;
+            this.buyButton.Visible = false;
+            this.buyButton.Click += new System.EventHandler(this.BuyClicked);
+            // grid
+            this.grid.AllowUserToAddRows = false;
+            this.grid.AllowUserToDeleteRows = false;
+            this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grid.BackgroundColor = System.Drawing.Color.White;
+            this.grid.Location = new System.Drawing.Point(3, 3);
+            this.grid.MultiSelect = false;
+            this.grid.Name = "grid";
+            this.grid.ReadOnly = true;
+            this.grid.RowHeadersVisible = false;
+            this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grid.Size = new System.Drawing.Size(896, 396);
+            this.grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DoubleClicked);
+            this.theatersTab.Controls.Add(this.grid);
+            // status
+            this.status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.status.AutoSize = true;
+            this.status.Location = new System.Drawing.Point(27, 559);
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(0, 15);
+            // form
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(964, 601);
+            this.Controls.Add(this.heading);
+            this.Controls.Add(this.searchBox);
+            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.editButton);
+            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.refreshButton);
+            this.Controls.Add(this.buyButton);
+            this.Controls.Add(this.tabControl);
+            this.Controls.Add(this.status);
+            this.MinimumSize = new System.Drawing.Size(980, 640);
+            this.Name = "FullForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Театр | Полная версия";
+            this.tabControl.ResumeLayout(false);
+            this.theatersTab.ResumeLayout(false);
+            this.directorsTab.ResumeLayout(false);
+            this.actorsTab.ResumeLayout(false);
+            this.playsTab.ResumeLayout(false);
+            this.castTab.ResumeLayout(false);
+            this.viewersTab.ResumeLayout(false);
+            this.ticketsTab.ResumeLayout(false);
+            this.ratingsTab.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.FullForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+        }
+    }
+}
