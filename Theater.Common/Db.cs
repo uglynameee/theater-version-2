@@ -303,7 +303,7 @@ namespace Theater.Common
                     insert.Parameters.AddWithValue("?", playId);
                     insert.Parameters.AddWithValue("?", seat);
                     insert.Parameters.AddWithValue("?", price);
-                    insert.Parameters.AddWithValue("?", DateTime.Now);
+                    insert.Parameters.Add("?", OleDbType.Date).Value = DateTime.Now;
                     insert.Parameters.AddWithValue("?", "Куплен");
                     insert.ExecuteNonQuery();
                 }
