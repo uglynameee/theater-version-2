@@ -9,6 +9,7 @@ namespace Theater.Version2
         private System.Windows.Forms.TabPage directorsTab;
         private System.Windows.Forms.TabPage actorsTab;
         private System.Windows.Forms.TabPage playsTab;
+        private System.Windows.Forms.TabPage myTicketsTab;
         private System.Windows.Forms.TabPage castTab;
         private System.Windows.Forms.TabPage viewersTab;
         private System.Windows.Forms.TabPage ticketsTab;
@@ -36,6 +37,7 @@ namespace Theater.Version2
             this.directorsTab = new System.Windows.Forms.TabPage();
             this.actorsTab = new System.Windows.Forms.TabPage();
             this.playsTab = new System.Windows.Forms.TabPage();
+            this.myTicketsTab = new System.Windows.Forms.TabPage();
             this.castTab = new System.Windows.Forms.TabPage();
             this.viewersTab = new System.Windows.Forms.TabPage();
             this.ticketsTab = new System.Windows.Forms.TabPage();
@@ -62,6 +64,7 @@ namespace Theater.Version2
             this.tabControl.Controls.Add(this.directorsTab);
             this.tabControl.Controls.Add(this.actorsTab);
             this.tabControl.Controls.Add(this.playsTab);
+            this.tabControl.Controls.Add(this.myTicketsTab);
             this.tabControl.Controls.Add(this.castTab);
             this.tabControl.Controls.Add(this.viewersTab);
             this.tabControl.Controls.Add(this.ticketsTab);
@@ -99,6 +102,13 @@ namespace Theater.Version2
             this.playsTab.Tag = 3;
             this.playsTab.Text = "Спектакли";
             this.playsTab.UseVisualStyleBackColor = true;
+            this.myTicketsTab.Location = new System.Drawing.Point(4, 24);
+            this.myTicketsTab.Name = "myTicketsTab";
+            this.myTicketsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.myTicketsTab.Size = new System.Drawing.Size(902, 402);
+            this.myTicketsTab.Tag = 6;
+            this.myTicketsTab.Text = "Мои покупки";
+            this.myTicketsTab.UseVisualStyleBackColor = true;
             this.castTab.Location = new System.Drawing.Point(4, 24);
             this.castTab.Name = "castTab";
             this.castTab.Padding = new System.Windows.Forms.Padding(3);
@@ -208,6 +218,7 @@ namespace Theater.Version2
             this.directorsTab.ResumeLayout(false);
             this.actorsTab.ResumeLayout(false);
             this.playsTab.ResumeLayout(false);
+            this.myTicketsTab.ResumeLayout(false);
             this.castTab.ResumeLayout(false);
             this.viewersTab.ResumeLayout(false);
             this.ticketsTab.ResumeLayout(false);

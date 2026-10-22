@@ -29,6 +29,7 @@ namespace Theater.Version2
             {
                 tabControl.TabPages.Clear();
                 tabControl.TabPages.Add(playsTab);
+                tabControl.TabPages.Add(myTicketsTab);
                 addButton.Visible = false;
                 editButton.Visible = false;
                 deleteButton.Visible = false;
@@ -41,7 +42,14 @@ namespace Theater.Version2
         private void Reload()
         {
             if (current == null) return;
-            try { data = current.Name == "Билеты" ? Db.ReadTickets() : Db.ReadTable(current); ApplySearch(); } catch (Exception ex) { Error(ex); }
+            try
+            {
+                data = current.Name == "Билеты"
+                    ? (user != null && !user.IsEmployee && user.SpectatorId.HasValue ? Db.ReadSpectatorTickets(user.SpectatorId.Value) : Db.ReadTickets())
+                    : Db.ReadTable(current);
+                ApplySearch();
+            }
+            catch (Exception ex) { Error(ex); }
         }
 
         private void ApplySearch()

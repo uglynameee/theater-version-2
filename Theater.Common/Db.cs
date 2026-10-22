@@ -277,6 +277,24 @@ namespace Theater.Common
                 "INNER JOIN [Спектакли] ON [Билеты].[КодСпектакля]=[Спектакли].[Код] ORDER BY [Билеты].[Код] DESC");
         }
 
+        public static DataTable ReadSpectatorTickets(int spectatorId)
+        {
+            Initialize();
+            string sql = "SELECT [Билеты].*, [Зрители].[Имя] & ' ' & [Зрители].[Фамилия] AS [Покупатель], [Спектакли].[Название] AS [НазваниеСпектакля] " +
+                "FROM ([Билеты] INNER JOIN [Зрители] ON [Билеты].[КодЗрителя]=[Зрители].[Код]) " +
+                "INNER JOIN [Спектакли] ON [Билеты].[КодСпектакля]=[Спектакли].[Код] " +
+                "WHERE [Билеты].[КодЗрителя]=? ORDER BY [Билеты].[Код] DESC";
+            using (OleDbConnection connection = Open())
+            using (OleDbCommand command = new OleDbCommand(sql, connection))
+            using (OleDbDataAdapter adapter = new OleDbDataAdapter(command))
+            {
+                command.Parameters.Add("?", OleDbType.Integer).Value = spectatorId;
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                return table;
+            }
+        }
+
         public static void BuyTicket(int spectatorId, int playId, string seat)
         {
             Initialize();
